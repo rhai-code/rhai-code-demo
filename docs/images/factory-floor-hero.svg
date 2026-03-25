@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="coreGlow" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#FF6600" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#FF4400" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FF4400" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="conveyorGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6600" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#FF6600" stop-opacity="0.6"/>
+      <stop offset="80%" stop-color="#FF6600" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FF6600" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="armGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CCCCCC"/>
+      <stop offset="100%" stop-color="#666666"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0d0d1a"/>
+  <rect width="1200" height="800" fill="url(#coreGlow)"/>
+
+  <!-- Floor grid - perspective -->
+  <g opacity="0.12">
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="#FF6600" stroke-width="0.5"/>
+    <line x1="0" y1="650" x2="1200" y2="650" stroke="#FF6600" stroke-width="0.5"/>
+    <line x1="0" y1="700" x2="1200" y2="700" stroke="#FF6600" stroke-width="0.5"/>
+    <line x1="0" y1="750" x2="1200" y2="750" stroke="#FF6600" stroke-width="0.5"/>
+    <line x1="200" y1="550" x2="100" y2="800" stroke="#FF6600" stroke-width="0.5"/>
+    <line x1="400" y1="550" x2="350" y2="800" stroke="#FF6600" stroke-width="0.5"/>
+    <line x1="600" y1="550" x2="600" y2="800" stroke="#FF6600" stroke-width="0.5"/>
+    <line x1="800" y1="550" x2="850" y2="800" stroke="#FF6600" stroke-width="0.5"/>
+    <line x1="1000" y1="550" x2="1100" y2="800" stroke="#FF6600" stroke-width="0.5"/>
+  </g>
+
+  <!-- Conveyor belt 1 -->
+  <g>
+    <rect x="100" y="420" width="1000" height="8" rx="4" fill="url(#conveyorGrad)" opacity="0.5"/>
+    <!-- Belt segments -->
+    <g opacity="0.3">
+      <rect x="150" y="420" width="30" height="8" rx="2" fill="#FF8833"/>
+      <rect x="250" y="420" width="30" height="8" rx="2" fill="#FF8833"/>
+      <rect x="350" y="420" width="30" height="8" rx="2" fill="#FF8833"/>
+      <rect x="450" y="420" width="30" height="8" rx="2" fill="#FF8833"/>
+      <rect x="550" y="420" width="30" height="8" rx="2" fill="#FF8833"/>
+      <rect x="650" y="420" width="30" height="8" rx="2" fill="#FF8833"/>
+      <rect x="750" y="420" width="30" height="8" rx="2" fill="#FF8833"/>
+      <rect x="850" y="420" width="30" height="8" rx="2" fill="#FF8833"/>
+      <rect x="950" y="420" width="30" height="8" rx="2" fill="#FF8833"/>
+    </g>
+  </g>
+
+  <!-- Robot arm 1 - left -->
+  <g transform="translate(300, 280)">
+    <!-- Base mount -->
+    <rect x="-15" y="-20" width="30" height="25" rx="3" fill="#444" stroke="#666" stroke-width="1"/>
+    <!-- Upper arm -->
+    <rect x="-8" y="-20" width="16" height="80" rx="4" fill="url(#armGrad)" stroke="#888" stroke-width="0.5"/>
+    <!-- Joint -->
+    <circle cx="0" cy="60" r="10" fill="#555" stroke="#888" stroke-width="1"/>
+    <circle cx="0" cy="60" r="4" fill="#FF6600" filter="url(#glow)"/>
+    <!-- Lower arm - angled -->
+    <rect x="-6" y="60" width="12" height="70" rx="3" fill="url(#armGrad)" stroke="#888" stroke-width="0.5" transform="rotate(25, 0, 60)"/>
+    <!-- Gripper -->
+    <g transform="translate(33, 123)">
+      <path d="M-12,0 L-15,18 L-8,18 L-5,8 L5,8 L8,18 L15,18 L12,0 Z" fill="#666" stroke="#888" stroke-width="0.5"/>
+      <circle cx="0" cy="2" r="3" fill="#FF6600" opacity="0.8" filter="url(#glow)"/>
+    </g>
+  </g>
+
+  <!-- Robot arm 2 - center -->
+  <g transform="translate(600, 260)">
+    <rect x="-15" y="-20" width="30" height="25" rx="3" fill="#444" stroke="#666" stroke-width="1"/>
+    <rect x="-8" y="-20" width="16" height="90" rx="4" fill="url(#armGrad)" stroke="#888" stroke-width="0.5"/>
+    <circle cx="0" cy="70" r="10" fill="#555" stroke="#888" stroke-width="1"/>
+    <circle cx="0" cy="70" r="4" fill="#00CCFF" filter="url(#glow)"/>
+    <rect x="-6" y="70" width="12" height="60" rx="3" fill="url(#armGrad)" stroke="#888" stroke-width="0.5" transform="rotate(-15, 0, 70)"/>
+    <!-- Welding tip -->
+    <g transform="translate(-16, 125)">
+      <polygon points="0,-5 -8,12 8,12" fill="#666"/>
+      <circle cx="0" cy="14" r="4" fill="#00CCFF" opacity="0.9" filter="url(#bigGlow)"/>
+      <!-- Sparks -->
+      <line x1="0" y1="14" x2="-12" y2="22" stroke="#00CCFF" stroke-width="1" opacity="0.6"/>
+      <line x1="0" y1="14" x2="10" y2="25" stroke="#00CCFF" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="14" x2="-5" y2="28" stroke="#00CCFF" stroke-width="0.8" opacity="0.4"/>
+      <line x1="0" y1="14" x2="8" y2="18" stroke="#fff" stroke-width="0.5" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- Robot arm 3 - right -->
+  <g transform="translate(900, 290)">
+    <rect x="-15" y="-20" width="30" height="25" rx="3" fill="#444" stroke="#666" stroke-width="1"/>
+    <rect x="-8" y="-20" width="16" height="75" rx="4" fill="url(#armGrad)" stroke="#888" stroke-width="0.5"/>
+    <circle cx="0" cy="55" r="10" fill="#555" stroke="#888" stroke-width="1"/>
+    <circle cx="0" cy="55" r="4" fill="#CC0000" filter="url(#glow)"/>
+    <rect x="-6" y="55" width="12" height="65" rx="3" fill="url(#armGrad)" stroke="#888" stroke-width="0.5" transform="rotate(20, 0, 55)"/>
+    <g transform="translate(24, 115)">
+      <path d="M-12,0 L-15,18 L-8,18 L-5,8 L5,8 L8,18 L15,18 L12,0 Z" fill="#666" stroke="#888" stroke-width="0.5"/>
+      <circle cx="0" cy="2" r="3" fill="#CC0000" opacity="0.8" filter="url(#glow)"/>
+    </g>
+  </g>
+
+  <!-- Products on conveyor -->
+  <g filter="url(#glow)">
+    <!-- Box 1 -->
+    <g transform="translate(200, 395)">
+      <rect x="-15" y="-15" width="30" height="25" rx="2" fill="#1a1a2e" stroke="#FF6600" stroke-width="1.5"/>
+      <line x1="-8" y1="-5" x2="8" y2="-5" stroke="#FF6600" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="0" cy="2" r="2" fill="#FF6600" opacity="0.6"/>
+    </g>
+    <!-- Box 2 -->
+    <g transform="translate(500, 395)">
+      <rect x="-15" y="-15" width="30" height="25" rx="2" fill="#1a1a2e" stroke="#00CCFF" stroke-width="1.5"/>
+      <line x1="-8" y1="-5" x2="8" y2="-5" stroke="#00CCFF" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="0" cy="2" r="2" fill="#00CCFF" opacity="0.6"/>
+    </g>
+    <!-- Box 3 -->
+    <g transform="translate(800, 395)">
+      <rect x="-15" y="-15" width="30" height="25" rx="2" fill="#1a1a2e" stroke="#CC0000" stroke-width="1.5"/>
+      <line x1="-8" y1="-5" x2="8" y2="-5" stroke="#CC0000" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="0" cy="2" r="2" fill="#CC0000" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- AI Brain / neural network center top -->
+  <g transform="translate(600, 130)" opacity="0.7">
+    <!-- Hex brain shape -->
+    <polygon points="0,-50 43,-25 43,25 0,50 -43,25 -43,-25" fill="none" stroke="#FF6600" stroke-width="1.5" filter="url(#glow)"/>
+    <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="none" stroke="#FF8833" stroke-width="1"/>
+    <!-- Inner circuit pattern -->
+    <circle cx="0" cy="0" r="8" fill="#FF6600" opacity="0.6" filter="url(#bigGlow)"/>
+    <line x1="0" y1="-8" x2="0" y2="-25" stroke="#FF6600" stroke-width="1"/>
+    <line x1="7" y1="4" x2="22" y2="12" stroke="#FF6600" stroke-width="1"/>
+    <line x1="-7" y1="4" x2="-22" y2="12" stroke="#FF6600" stroke-width="1"/>
+    <!-- Connection dots -->
+    <circle cx="0" cy="-25" r="3" fill="#FF8833"/>
+    <circle cx="22" cy="12" r="3" fill="#FF8833"/>
+    <circle cx="-22" cy="12" r="3" fill="#FF8833"/>
+  </g>
+
+  <!-- Neural connections from brain to arms -->
+  <g opacity="0.2" stroke-dasharray="4,6">
+    <line x1="560" y1="150" x2="300" y2="270" stroke="#FF6600" stroke-width="1"/>
+    <line x1="600" y1="170" x2="600" y2="250" stroke="#00CCFF" stroke-width="1"/>
+    <line x1="640" y1="150" x2="900" y2="280" stroke="#CC0000" stroke-width="1"/>
+  </g>
+
+  <!-- Data streams / flowing dots -->
+  <g opacity="0.5">
+    <circle cx="450" cy="200" r="2" fill="#FF6600"/>
+    <circle cx="470" cy="215" r="1.5" fill="#FF6600"/>
+    <circle cx="490" cy="230" r="1" fill="#FF6600"/>
+    <circle cx="730" cy="205" r="2" fill="#CC0000"/>
+    <circle cx="750" cy="220" r="1.5" fill="#CC0000"/>
+    <circle cx="770" cy="235" r="1" fill="#CC0000"/>
+  </g>
+
+  <!-- Status HUD elements -->
+  <g opacity="0.35">
+    <!-- Left panel -->
+    <rect x="50" y="100" width="120" height="80" rx="3" fill="none" stroke="#FF6600" stroke-width="0.8"/>
+    <line x1="60" y1="120" x2="100" y2="120" stroke="#FF6600" stroke-width="2"/>
+    <line x1="60" y1="132" x2="130" y2="132" stroke="#FF6600" stroke-width="1.5"/>
+    <line x1="60" y1="142" x2="110" y2="142" stroke="#FF6600" stroke-width="1"/>
+    <line x1="60" y1="152" x2="140" y2="152" stroke="#FF6600" stroke-width="1.5"/>
+    <line x1="60" y1="162" x2="90" y2="162" stroke="#FF6600" stroke-width="1"/>
+    <text x="60" y="115" fill="#FF6600" font-size="8" font-family="monospace">THROUGHPUT</text>
+    <!-- Right panel -->
+    <rect x="1030" y="100" width="120" height="80" rx="3" fill="none" stroke="#CC0000" stroke-width="0.8"/>
+    <text x="1040" y="115" fill="#CC0000" font-size="8" font-family="monospace">EFFICIENCY</text>
+    <line x1="1040" y1="120" x2="1090" y2="120" stroke="#CC0000" stroke-width="2"/>
+    <line x1="1040" y1="132" x2="1120" y2="132" stroke="#CC0000" stroke-width="1.5"/>
+    <line x1="1040" y1="142" x2="1100" y2="142" stroke="#CC0000" stroke-width="1"/>
+    <line x1="1040" y1="152" x2="1130" y2="152" stroke="#CC0000" stroke-width="1.5"/>
+    <line x1="1040" y1="162" x2="1080" y2="162" stroke="#CC0000" stroke-width="1"/>
+    <!-- Bottom center readout -->
+    <rect x="470" y="500" width="260" height="50" rx="3" fill="none" stroke="#FF8833" stroke-width="0.8"/>
+    <text x="485" y="518" fill="#FF8833" font-size="9" font-family="monospace">AGENT DECISION ENGINE</text>
+    <text x="485" y="533" fill="#FF6600" font-size="8" font-family="monospace">STATUS: OPTIMIZING...</text>
+    <rect x="485" y="538" width="180" height="4" rx="2" fill="#1a1a2e" stroke="#FF6600" stroke-width="0.5"/>
+    <rect x="485" y="538" width="130" height="4" rx="2" fill="#FF6600" opacity="0.6"/>
+  </g>
+
+  <!-- Ambient particles -->
+  <g opacity="0.3">
+    <circle cx="80" cy="300" r="1.5" fill="#FF6600"/>
+    <circle cx="150" cy="500" r="1" fill="#FF8833"/>
+    <circle cx="1100" cy="350" r="1.5" fill="#CC0000"/>
+    <circle cx="1050" cy="450" r="1" fill="#FF6600"/>
+    <circle cx="550" cy="620" r="1.5" fill="#FF8833"/>
+    <circle cx="700" cy="650" r="1" fill="#FF6600"/>
+    <circle cx="350" cy="580" r="1.5" fill="#CC0000"/>
+    <circle cx="900" cy="600" r="1" fill="#FF8833"/>
+  </g>
+</svg>
