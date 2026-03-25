@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 interface Demo {
   id: string;
   title: string;
@@ -74,7 +76,7 @@ function FeaturedCard({ demo }: { demo: Demo }) {
         className="post-cover post-cover--featured"
         style={{ backgroundColor: demo.bgColor }}
       >
-        <img className="post-cover__img" alt="" src={demo.image} />
+        <img className="post-cover__img" alt="" src={`${BASE}${demo.image}`} />
         <h1 className="post-cover__title" style={{ color: demo.titleColor }}>
           {demo.title}{" "}
           <strong>{demo.subtitle}</strong>
@@ -95,7 +97,7 @@ function DemoCard({ demo }: { demo: Demo }) {
           className="post-cover post-cover--small"
           style={{ backgroundColor: demo.bgColor }}
         >
-          <img className="post-cover__img" alt="" src={demo.image} />
+          <img className="post-cover__img" alt="" src={`${BASE}${demo.image}`} />
           <h1 className="post-cover__title" style={{ color: demo.titleColor }}>
             <b>{demo.title}</b> {demo.subtitle}
           </h1>
