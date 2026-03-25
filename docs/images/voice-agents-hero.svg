@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF4136"/>
+      <stop offset="25%" stop-color="#FF6B35"/>
+      <stop offset="50%" stop-color="#FFDC00"/>
+      <stop offset="75%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FF4136"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0a0a1a"/>
+  <!-- Ambient glows -->
+  <circle cx="350" cy="400" r="300" fill="url(#glow1)"/>
+  <circle cx="850" cy="350" r="250" fill="url(#glow2)"/>
+  <!-- Sound wave visualization - center -->
+  <g transform="translate(600,400)" filter="url(#blur1)">
+    <!-- Concentric sound rings -->
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#FF6B35" stroke-width="2" opacity="0.8"/>
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#FF6B35" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="0" cy="0" r="150" fill="none" stroke="#FF6B35" stroke-width="1" opacity="0.4"/>
+    <circle cx="0" cy="0" r="210" fill="none" stroke="#FF6B35" stroke-width="0.8" opacity="0.25"/>
+    <circle cx="0" cy="0" r="280" fill="none" stroke="#FF6B35" stroke-width="0.5" opacity="0.15"/>
+  </g>
+  <!-- Waveform bars -->
+  <g transform="translate(300,400)" opacity="0.9">
+    <rect x="0" y="-30" width="4" height="60" rx="2" fill="#FF4136"/>
+    <rect x="12" y="-55" width="4" height="110" rx="2" fill="#FF4136"/>
+    <rect x="24" y="-80" width="4" height="160" rx="2" fill="#FF6B35"/>
+    <rect x="36" y="-120" width="4" height="240" rx="2" fill="#FF6B35"/>
+    <rect x="48" y="-90" width="4" height="180" rx="2" fill="#FFDC00"/>
+    <rect x="60" y="-140" width="4" height="280" rx="2" fill="#FFDC00"/>
+    <rect x="72" y="-100" width="4" height="200" rx="2" fill="#FF6B35"/>
+    <rect x="84" y="-160" width="4" height="320" rx="2" fill="#FF6B35"/>
+    <rect x="96" y="-70" width="4" height="140" rx="2" fill="#FF4136"/>
+    <rect x="108" y="-130" width="4" height="260" rx="2" fill="#FF4136"/>
+    <rect x="120" y="-50" width="4" height="100" rx="2" fill="#FF6B35"/>
+    <rect x="132" y="-110" width="4" height="220" rx="2" fill="#FFDC00"/>
+    <rect x="144" y="-75" width="4" height="150" rx="2" fill="#FFDC00"/>
+    <rect x="156" y="-95" width="4" height="190" rx="2" fill="#FF6B35"/>
+    <rect x="168" y="-45" width="4" height="90" rx="2" fill="#FF4136"/>
+  </g>
+  <!-- Right waveform bars (mirrored) -->
+  <g transform="translate(720,400)" opacity="0.9">
+    <rect x="0" y="-45" width="4" height="90" rx="2" fill="#FF4136"/>
+    <rect x="12" y="-95" width="4" height="190" rx="2" fill="#FF6B35"/>
+    <rect x="24" y="-75" width="4" height="150" rx="2" fill="#FFDC00"/>
+    <rect x="36" y="-110" width="4" height="220" rx="2" fill="#FFDC00"/>
+    <rect x="48" y="-50" width="4" height="100" rx="2" fill="#FF6B35"/>
+    <rect x="60" y="-130" width="4" height="260" rx="2" fill="#FF4136"/>
+    <rect x="72" y="-70" width="4" height="140" rx="2" fill="#FF4136"/>
+    <rect x="84" y="-160" width="4" height="320" rx="2" fill="#FF6B35"/>
+    <rect x="96" y="-100" width="4" height="200" rx="2" fill="#FF6B35"/>
+    <rect x="108" y="-140" width="4" height="280" rx="2" fill="#FFDC00"/>
+    <rect x="120" y="-90" width="4" height="180" rx="2" fill="#FFDC00"/>
+    <rect x="132" y="-120" width="4" height="240" rx="2" fill="#FF6B35"/>
+    <rect x="144" y="-80" width="4" height="160" rx="2" fill="#FF6B35"/>
+    <rect x="156" y="-55" width="4" height="110" rx="2" fill="#FF4136"/>
+    <rect x="168" y="-30" width="4" height="60" rx="2" fill="#FF4136"/>
+  </g>
+  <!-- Microphone icon center -->
+  <g transform="translate(600,380)">
+    <rect x="-18" y="-50" width="36" height="70" rx="18" fill="#fff" opacity="0.95"/>
+    <path d="M-30,10 C-30,40 30,40 30,10" fill="none" stroke="#fff" stroke-width="3" opacity="0.9"/>
+    <line x1="0" y1="40" x2="0" y2="60" stroke="#fff" stroke-width="3" opacity="0.9"/>
+    <line x1="-15" y1="60" x2="15" y2="60" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  </g>
+  <!-- Pizza slice accent -->
+  <g transform="translate(180,200) rotate(-15)">
+    <path d="M0,0 L40,-70 L80,0 Z" fill="#FFDC00" opacity="0.7"/>
+    <circle cx="30" cy="-25" r="5" fill="#CC0000" opacity="0.8"/>
+    <circle cx="50" cy="-15" r="4" fill="#CC0000" opacity="0.8"/>
+    <circle cx="35" cy="-45" r="4.5" fill="#CC0000" opacity="0.8"/>
+  </g>
+  <!-- Neural network nodes -->
+  <g opacity="0.3">
+    <circle cx="150" cy="550" r="4" fill="#00D4FF"/>
+    <circle cx="200" cy="600" r="3" fill="#00D4FF"/>
+    <circle cx="120" cy="620" r="3.5" fill="#00D4FF"/>
+    <line x1="150" y1="550" x2="200" y2="600" stroke="#00D4FF" stroke-width="0.5"/>
+    <line x1="150" y1="550" x2="120" y2="620" stroke="#00D4FF" stroke-width="0.5"/>
+    <line x1="200" y1="600" x2="120" y2="620" stroke="#00D4FF" stroke-width="0.5"/>
+    <circle cx="1050" cy="180" r="4" fill="#FF6B35"/>
+    <circle cx="1100" cy="220" r="3" fill="#FF6B35"/>
+    <circle cx="1020" cy="240" r="3.5" fill="#FF6B35"/>
+    <line x1="1050" y1="180" x2="1100" y2="220" stroke="#FF6B35" stroke-width="0.5"/>
+    <line x1="1050" y1="180" x2="1020" y2="240" stroke="#FF6B35" stroke-width="0.5"/>
+    <line x1="1100" y1="220" x2="1020" y2="240" stroke="#FF6B35" stroke-width="0.5"/>
+  </g>
+</svg>

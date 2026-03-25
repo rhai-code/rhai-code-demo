@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="redGlow" cx="30%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#CC0000" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#CC0000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="greenGlow" cx="70%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#76B900" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#76B900" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="centerClash" cx="50%" cy="50%" r="30%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="divider" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#FFD700" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#FFD700" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0a0a14"/>
+  <!-- Team glows -->
+  <rect width="600" height="800" fill="url(#redGlow)"/>
+  <rect x="600" width="600" height="800" fill="url(#greenGlow)"/>
+  <circle cx="600" cy="400" r="250" fill="url(#centerClash)"/>
+  <!-- Center divider line -->
+  <line x1="600" y1="0" x2="600" y2="800" stroke="url(#divider)" stroke-width="2"/>
+  <!-- Red Hat side - stylized fedora -->
+  <g transform="translate(280,350)">
+    <!-- Hat brim -->
+    <ellipse cx="0" cy="30" rx="90" ry="25" fill="#CC0000" opacity="0.9"/>
+    <!-- Hat crown -->
+    <path d="M-55,30 C-55,-20 -40,-55 0,-55 C40,-55 55,-20 55,30" fill="#EE0000" opacity="0.9"/>
+    <!-- Hat band -->
+    <rect x="-55" y="15" width="110" height="8" fill="#990000" opacity="0.8"/>
+    <!-- Hat highlight -->
+    <path d="M-30,-40 C-20,-50 20,-50 30,-40" fill="none" stroke="#FF3333" stroke-width="1.5" opacity="0.5"/>
+  </g>
+  <!-- NVIDIA side - stylized eye/GPU -->
+  <g transform="translate(920,350)">
+    <!-- Eye shape -->
+    <path d="M-90,0 C-90,-50 -50,-80 0,-80 C50,-80 90,-50 90,0 C90,50 50,80 0,80 C-50,80 -90,50 -90,0 Z" fill="none" stroke="#76B900" stroke-width="3" opacity="0.8"/>
+    <!-- Inner iris -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#76B900" stroke-width="2.5" opacity="0.9"/>
+    <!-- Pupil -->
+    <circle cx="0" cy="0" r="15" fill="#76B900" opacity="0.8"/>
+    <!-- Reflection -->
+    <circle cx="-8" cy="-8" r="5" fill="#fff" opacity="0.3"/>
+  </g>
+  <!-- VS lightning bolt center -->
+  <g transform="translate(600,380)">
+    <polygon points="-8,-60 12,-10 -2,-10 8,60 -12,10 2,10" fill="#FFD700" opacity="0.9"/>
+  </g>
+  <!-- Game theory grid - subtle -->
+  <g transform="translate(430,550)" opacity="0.3">
+    <rect x="0" y="0" width="70" height="35" fill="none" stroke="#CC0000" stroke-width="1"/>
+    <rect x="70" y="0" width="70" height="35" fill="none" stroke="#76B900" stroke-width="1"/>
+    <rect x="0" y="35" width="70" height="35" fill="none" stroke="#CC0000" stroke-width="1"/>
+    <rect x="70" y="35" width="70" height="35" fill="none" stroke="#76B900" stroke-width="1"/>
+    <text x="35" y="22" text-anchor="middle" fill="#CC0000" font-size="11" font-family="monospace">+3</text>
+    <text x="105" y="22" text-anchor="middle" fill="#76B900" font-size="11" font-family="monospace">+5</text>
+    <text x="35" y="57" text-anchor="middle" fill="#CC0000" font-size="11" font-family="monospace">0</text>
+    <text x="105" y="57" text-anchor="middle" fill="#76B900" font-size="11" font-family="monospace">-1</text>
+    <text x="35" y="-8" text-anchor="middle" fill="#aaa" font-size="9" font-family="monospace">COOPERATE</text>
+    <text x="105" y="-8" text-anchor="middle" fill="#aaa" font-size="9" font-family="monospace">DECEIVE</text>
+  </g>
+  <!-- Floating particles -->
+  <g opacity="0.4">
+    <circle cx="150" cy="150" r="2" fill="#CC0000"/>
+    <circle cx="200" cy="250" r="1.5" fill="#CC0000"/>
+    <circle cx="350" cy="180" r="2.5" fill="#CC0000"/>
+    <circle cx="100" cy="500" r="1.5" fill="#CC0000"/>
+    <circle cx="400" cy="650" r="2" fill="#CC0000"/>
+    <circle cx="1050" cy="150" r="2" fill="#76B900"/>
+    <circle cx="1000" cy="250" r="1.5" fill="#76B900"/>
+    <circle cx="850" cy="180" r="2.5" fill="#76B900"/>
+    <circle cx="1100" cy="500" r="1.5" fill="#76B900"/>
+    <circle cx="800" cy="650" r="2" fill="#76B900"/>
+  </g>
+  <!-- Connection lines between sides -->
+  <g opacity="0.15">
+    <line x1="370" y1="350" x2="830" y2="350" stroke="#FFD700" stroke-width="0.5" stroke-dasharray="4,8"/>
+    <line x1="370" y1="400" x2="830" y2="400" stroke="#FFD700" stroke-width="0.5" stroke-dasharray="4,8"/>
+    <line x1="400" y1="300" x2="800" y2="300" stroke="#FFD700" stroke-width="0.5" stroke-dasharray="4,8"/>
+    <line x1="400" y1="450" x2="800" y2="450" stroke="#FFD700" stroke-width="0.5" stroke-dasharray="4,8"/>
+  </g>
+</svg>
