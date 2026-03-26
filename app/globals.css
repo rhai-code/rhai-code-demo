@@ -211,10 +211,11 @@ a:hover { color: rgba(160, 0, 52, 0.8); }
 
 @media (max-width: 600px) {
   .navigation__button--contact-us {
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-left: 6px;
-    font-size: 0;
+    margin-right: 0;
+    font-size: 11px;
   }
 }
 
@@ -228,9 +229,14 @@ a:hover { color: rgba(160, 0, 52, 0.8); }
 @media (max-width: 600px) {
   .navigation__icon {
     top: -1px;
+    margin-right: 4px;
   }
   .navigation__icon.navigation__icon--desktop {
-    display: none;
+    display: inline;
+  }
+  .navigation__icon.navigation__icon--desktop svg {
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -241,8 +247,7 @@ a:hover { color: rgba(160, 0, 52, 0.8); }
 }
 
 @media (max-width: 600px) {
-  .navigation__icon { margin-right: 0; }
-  .navigation__icon.navigation__icon--desktop { display: none; }
+  .navigation__icon { margin-right: 4px; }
 }
 
 /* ── Post List ── */
