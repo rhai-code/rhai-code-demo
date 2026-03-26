@@ -42,7 +42,7 @@ const demos: Demo[] = [
   {
     id: "prisoners-dilemma",
     title: "The Business AI Game:",
-    subtitle: "agentic prisoner's dilemma - Red Hat vs NVIDIA",
+    subtitle: "agentic prisoner's dilemma - Crimson Dynamics vs Verdant Systems",
     shortUrl: "red.ht/prisoner",
     image: "/images/prisoners-dilemma-hero.svg",
     bgColor: "#0a0a14",
