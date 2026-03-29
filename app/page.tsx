@@ -174,8 +174,11 @@ export default function DemosPage() {
           Red Hat
         </a>
         <div className="navigation__buttons">
-          <Link className="navigation__button" href="/">
+          <Link className="navigation__button navigation__button--active" href="/">
             Demos
+          </Link>
+          <Link className="navigation__button" href="/code">
+            Code
           </Link>
         </div>
         <a

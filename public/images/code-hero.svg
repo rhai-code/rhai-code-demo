@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 400">
+  <defs>
+    <mask id="codeMask">
+      <rect width="1080" height="400" fill="white"/>
+    </mask>
+  </defs>
+
+  <!-- White background -->
+  <rect width="1080" height="400" fill="#ffffff"/>
+
+  <!-- Faded source code background -->
+  <g fill="#d0d0d0" font-family="Consolas, 'Courier New', monospace" font-size="11" opacity="0.55">
+    <text x="-20" y="18">SUCCEEDED, SET_COMP_DEPS } from "./actions/blueprints"; const fetchingBlueprints = (state = false, action) =&gt; { switch (action.type) { case FETCHING_BLUE</text>
+    <text x="-40" y="36">FETCHING_BLUEPRINT_NAMES_SUCCEEDED:  // if 1 or more blueprints, fetching is true because we're still waiting on the contents)  return action.payload.bluepri</text>
+    <text x="-10" y="54">ING_BLUEPRINTS_SUCCEEDED:  case BLUEPRINTS_FAILURE:  return false;  default: return state; } }; const errorState = (state = null, action) =&gt; { switch (action.ty</text>
+    <text x="-30" y="72">PRINTS: case FETCHING_BLUEPRINTS_SUCCEEDED: return null; case BLUEPRINTS_FAILURE: return action.payload.error; default: return state; } }; const { blu</text>
+    <text x="-50" y="90">=&gt; { switch (action.type) { case CREATING_BLUEPRINT_SUCCEEDED: return [ ...state.filter(blueprint =&gt; blueprint.present.id !== action.payload.blueprint.id), { pas</text>
+    <text x="-15" y="108">action.payload.blueprint, { localPendingChanges: [], workspacePendingChanges: [] }), future: [] } ];  // The following reducers filter the blueprint out of the state an</text>
+    <text x="-45" y="126">blueprint contains component data or is not found in the state  case FETCHING_BLUEPRINTS_SUCCEEDED: return action.payload.blueprint.components !== und</text>
+    <text x="-25" y="144">=&gt; blueprint.present.id === action.payload.blueprint.id) ? [...state.filter(blueprint =&gt; blueprint.present.id !== action.payload.blueprint.id), { past: [], present: Object.as</text>
+    <text x="-5" y="162">print, { localPendingChanges: [], workspacePendingChanges: [] }), future: [] } ] : state;  case FETCHING_BLUEPRINT_CONTENTS_SUCCEEDED: return [ ...state.fi</text>
+    <text x="-35" y="180">print.present.id !== action.payload.blueprint.id) },  past: action.payload.pastBlueprint, present: action.payload.blueprint, future: [] } ]; case BLUEPRINT_CONTENTS</text>
+    <text x="-55" y="198">...state.map(blueprint =&gt; { if (blueprint.present.id === action.payload.blueprint.id) { return Object.assign({}, blueprint.present, { components: action.payload.blueprint.c</text>
+    <text x="-20" y="216">}); return blueprint; } }); case UPDATE_BLUEPRINT: return [...state.map(blueprint =&gt; { if (blueprint.present.id === action.payload.blueprint.id) { return Object.assign</text>
+    <text x="-40" y="234">blueprint, { past: blueprint.past.concat([blueprint.present]), present: Object.assign({}, blueprint.present, { components: action.payload.components, packages: actio</text>
+    <text x="-10" y="252">action.payload.modules, localPendingChanges: action.payload.packages, modules: action.payload.blueprint.packages, errorState: action.payload.blueprin</text>
+    <text x="-30" y="270">return [ ...state.map(blueprint =&gt; { if (blueprint.present.id === action.payload.blueprint.id) { return Object.assign({}, blueprint, { present: Object.assign({}, cons</text>
+    <text x="-50" y="288">action.payload.blueprint.modules, localPendingChanges: action.payload.pendingChange, errorState: {} }), future: [] }); } return blueprint; } ]; case RELOADING_BLUEPRIN</text>
+    <text x="-15" y="306">return [ ...state.map(blueprint =&gt; { if (blueprint.present.id === action.payload.blueprint.id) { return Object.assign({}, blueprint, { present: Object.assign({}, blue</text>
+    <text x="-45" y="324">action.payload.blueprint.packages, modules: action.payload.blueprint.packages, modules: action.payload.blueprint.modules, errorState: action.payload.bluepri</text>
+    <text x="-25" y="342">blueprint; } ]; case SET_BLUEPRINT: return [ ...state.map(blueprint =&gt; { if (blueprint.present.id === action.payload.blueprint.id) { return Object.assign({}, blueprin</text>
+    <text x="-5" y="360">sign({}, action.payload.blueprint, { localPendingChanges: [], workspacePendingChanges: [] }), future: [] }); } return blueprint; } ]; case SET_BLUEPRINT_COMMEN</text>
+    <text x="-35" y="378">=&gt; { if (blueprint.present.id === action.payload.blueprint.id) { return Object.assign({}, blueprint, { present: Object.assign({}, blueprint.present, { comment: action.pay</text>
+    <text x="-55" y="396">blueprint; } ]; case SET_BLUEPRINT_USERS: return [ ...state.map(blueprint =&gt; { if (blueprint.present.id === action.payload.blueprintId) { return Object.assign({}, blu</text>
+  </g>
+
+  <!-- Red accent bar -->
+  <rect x="350" y="145" width="4" height="110" fill="#CC0000" rx="2"/>
+
+  <!-- Main headline -->
+  <text x="370" y="230" font-family="'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="bold" fill="#1a1a1a" letter-spacing="-1">Our code is open</text>
+
+  <!-- Red cursor/underscore -->
+  <rect x="908" y="232" width="30" height="4" fill="#CC0000">
+    <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+</svg>

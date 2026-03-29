@@ -502,3 +502,175 @@ a:hover { color: rgba(160, 0, 52, 0.8); }
     font-size: 3.333vw;
   }
 }
+
+/* ── Code Page ── */
+
+.code-hero {
+  margin-top: 6.666666666666667vw;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.code-hero__img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .code-hero {
+    margin-top: 38px;
+  }
+  .code-hero__img {
+    max-height: 200px;
+  }
+}
+
+.code-page {
+  background: #fff;
+  padding: 0 3.333vw 6vw;
+}
+
+@media (max-width: 600px) {
+  .code-page {
+    padding: 0 12px 40px;
+  }
+}
+
+.code-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5vw;
+}
+
+@media (max-width: 900px) {
+  .code-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.code-list__item {
+  display: flex;
+}
+
+.code-list__link {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.code-list__link:visited {
+  color: inherit;
+}
+
+.code-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2vw 2.5vw;
+  background: #0d1117;
+  border-left: 4px solid #FFD700;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.code-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+  .code-card {
+    padding: 16px 18px;
+  }
+}
+
+.code-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+  margin-bottom: 1vw;
+}
+
+@media (max-width: 600px) {
+  .code-card__header {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+}
+
+.code-card__icon {
+  color: #8b949e;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.code-card__name {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 1.3vw;
+  color: #58a6ff;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+@media (max-width: 600px) {
+  .code-card__name {
+    font-size: 14px;
+  }
+}
+
+.code-card__desc {
+  margin: 0 0 1.2vw;
+  font-size: 1.1vw;
+  color: #c9d1d9;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .code-card__desc {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+}
+
+.code-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-card__url {
+  font-size: 0.95vw;
+  color: #8b949e;
+}
+
+@media (max-width: 600px) {
+  .code-card__url {
+    font-size: 11px;
+  }
+}
+
+.code-card__arrow {
+  font-size: 1.3vw;
+  color: #58a6ff;
+  transition: transform 0.2s ease;
+}
+
+.code-card:hover .code-card__arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .code-card__arrow {
+    font-size: 16px;
+  }
+}
