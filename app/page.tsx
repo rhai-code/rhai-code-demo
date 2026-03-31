@@ -105,6 +105,17 @@ const demos: Demo[] = [
     dateColor: "#00ffaa",
     href: "https://red.ht/black-jack",
   },
+  {
+    id: "real-or-fake",
+    title: "Real or Fake:",
+    subtitle: "can you spot the difference? Synthetic Data Generation",
+    shortUrl: "red.ht/real-or-fake",
+    image: "/images/real-or-fake-hero.svg",
+    bgColor: "#0a0a1a",
+    titleColor: "#FF3366",
+    dateColor: "#00FF88",
+    href: "https://red.ht/real-or-fake",
+  },
 ];
 
 function TalkToUsIcon() {

@@ -77,6 +77,14 @@ const repos: Repo[] = [
     github: "https://github.com/cedricclyburn/blackjack-demo",
     accentColor: "#FFD700",
   },
+  {
+    id: "real-or-fake",
+    name: "real-or-fake-synthetic-data-demo",
+    description: "Real or Fake — can you spot the difference? Synthetic Data Generation",
+    shortUrl: "red.ht/real-or-fake",
+    github: "https://github.com/soyr-redhat/real-or-fake-synthetic-data-demo",
+    accentColor: "#FF3366",
+  },
 ];
 
 function TalkToUsIcon() {
