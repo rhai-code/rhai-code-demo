@@ -116,6 +116,17 @@ const demos: Demo[] = [
     dateColor: "#00FF88",
     href: "https://red.ht/real-or-fake",
   },
+  {
+    id: "wordswarm",
+    title: "Word Swarm:",
+    subtitle: "can you beat the AI Agent at this buzzingly fun word game?",
+    shortUrl: "red.ht/wordswarm",
+    image: "/images/wordswarm-hero.svg",
+    bgColor: "#0a0a1a",
+    titleColor: "#FFD700",
+    dateColor: "#FF6600",
+    href: "https://red.ht/wordswarm",
+  },
 ];
 
 function TalkToUsIcon() {

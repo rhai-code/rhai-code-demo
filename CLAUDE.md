@@ -19,3 +19,5 @@ red.ht/mm-chat - MultiModal chatbot to easily compare side by side models - http
 red.ht/black-jack - become with poker king with AI assisted Blackjack - https://github.com/cedricclyburn/blackjack-demo
 
 red.ht/real-or-fake - is it Real or is it Fake ? can you spot the difference, Synthetic Data Generation demo - https://github.com/soyr-redhat/real-or-fake-synthetic-data-demo
+
+red.ht/wordswarm - can you beat the AI Agent at this buzzingly fun word game - https://github.com/eformat/wordbeez-docker

@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="50%" stop-color="#0d1020"/>
+      <stop offset="100%" stop-color="#14082a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="honeyGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="50%" stop-color="#FFA500"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    <linearGradient id="hexGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FF8C00" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Honeycomb hex grid pattern -->
+  <g opacity="0.12" stroke="#FFD700" stroke-width="1" fill="url(#hexGrad)">
+    <!-- Row 1 -->
+    <polygon points="80,40 110,23 140,40 140,74 110,91 80,74"/>
+    <polygon points="140,40 170,23 200,40 200,74 170,91 140,74"/>
+    <polygon points="200,40 230,23 260,40 260,74 230,91 200,74"/>
+    <polygon points="260,40 290,23 320,40 320,74 290,91 260,74"/>
+    <polygon points="500,40 530,23 560,40 560,74 530,91 500,74"/>
+    <polygon points="560,40 590,23 620,40 620,74 590,91 560,74"/>
+    <polygon points="620,40 650,23 680,40 680,74 650,91 620,74"/>
+    <polygon points="680,40 710,23 740,40 740,74 710,91 680,74"/>
+    <!-- Row 2 (offset) -->
+    <polygon points="50,91 80,74 110,91 110,125 80,142 50,125"/>
+    <polygon points="110,91 140,74 170,91 170,125 140,142 110,125"/>
+    <polygon points="170,91 200,74 230,91 230,125 200,142 170,125"/>
+    <polygon points="630,91 660,74 690,91 690,125 660,142 630,125"/>
+    <polygon points="690,91 720,74 750,91 750,125 720,142 690,125"/>
+    <!-- Row 3 -->
+    <polygon points="80,142 110,125 140,142 140,176 110,193 80,176"/>
+    <polygon points="140,142 170,125 200,142 200,176 170,193 140,176"/>
+    <polygon points="600,142 630,125 660,142 660,176 630,193 600,176"/>
+    <polygon points="660,142 690,125 720,142 720,176 690,193 660,176"/>
+    <!-- Bottom rows -->
+    <polygon points="80,350 110,333 140,350 140,384 110,401 80,384"/>
+    <polygon points="140,350 170,333 200,350 200,384 170,401 140,384"/>
+    <polygon points="600,350 630,333 660,350 660,384 630,401 600,384"/>
+    <polygon points="660,350 690,333 720,350 720,384 690,401 660,384"/>
+    <polygon points="80,401 110,384 140,401 140,435 110,452 80,435"/>
+    <polygon points="620,401 650,384 680,401 680,435 650,452 620,435"/>
+    <polygon points="680,401 710,384 740,401 740,435 710,452 680,435"/>
+  </g>
+
+  <!-- Scattered letter tiles -->
+  <g font-family="'Helvetica Neue', Arial, sans-serif" font-weight="bold">
+    <!-- Floating letters around the edges -->
+    <g opacity="0.25">
+      <g transform="translate(100, 80) rotate(-15)">
+        <rect x="-18" y="-22" width="36" height="36" rx="5" fill="#1a1a3a" stroke="#FFD700" stroke-width="1"/>
+        <text x="0" y="5" font-size="22" fill="#FFD700" text-anchor="middle">W</text>
+      </g>
+      <g transform="translate(700, 100) rotate(10)">
+        <rect x="-18" y="-22" width="36" height="36" rx="5" fill="#1a1a3a" stroke="#FFD700" stroke-width="1"/>
+        <text x="0" y="5" font-size="22" fill="#FFD700" text-anchor="middle">O</text>
+      </g>
+      <g transform="translate(150, 420) rotate(8)">
+        <rect x="-18" y="-22" width="36" height="36" rx="5" fill="#1a1a3a" stroke="#FFD700" stroke-width="1"/>
+        <text x="0" y="5" font-size="22" fill="#FFD700" text-anchor="middle">R</text>
+      </g>
+      <g transform="translate(660, 400) rotate(-12)">
+        <rect x="-18" y="-22" width="36" height="36" rx="5" fill="#1a1a3a" stroke="#FFD700" stroke-width="1"/>
+        <text x="0" y="5" font-size="22" fill="#FFD700" text-anchor="middle">D</text>
+      </g>
+      <g transform="translate(720, 300) rotate(5)">
+        <rect x="-18" y="-22" width="36" height="36" rx="5" fill="#1a1a3a" stroke="#FFD700" stroke-width="1"/>
+        <text x="0" y="5" font-size="22" fill="#FFD700" text-anchor="middle">S</text>
+      </g>
+      <g transform="translate(70, 260) rotate(-8)">
+        <rect x="-18" y="-22" width="36" height="36" rx="5" fill="#1a1a3a" stroke="#FFD700" stroke-width="1"/>
+        <text x="0" y="5" font-size="22" fill="#FFD700" text-anchor="middle">A</text>
+      </g>
+      <g transform="translate(740, 200) rotate(18)">
+        <rect x="-18" y="-22" width="36" height="36" rx="5" fill="#1a1a3a" stroke="#FF6600" stroke-width="1"/>
+        <text x="0" y="5" font-size="22" fill="#FF6600" text-anchor="middle">I</text>
+      </g>
+      <g transform="translate(55, 380) rotate(-20)">
+        <rect x="-18" y="-22" width="36" height="36" rx="5" fill="#1a1a3a" stroke="#FF6600" stroke-width="1"/>
+        <text x="0" y="5" font-size="22" fill="#FF6600" text-anchor="middle">Z</text>
+      </g>
+    </g>
+
+    <!-- Center word tiles: "SWARM" -->
+    <g filter="url(#glow)">
+      <g transform="translate(245, 210)">
+        <rect x="0" y="0" width="56" height="56" rx="8" fill="#1a1a3a" stroke="#FFD700" stroke-width="2"/>
+        <text x="28" y="40" font-size="36" fill="#FFD700" text-anchor="middle">S</text>
+        <text x="48" y="52" font-size="10" fill="#FFA500">1</text>
+      </g>
+      <g transform="translate(311, 210)">
+        <rect x="0" y="0" width="56" height="56" rx="8" fill="#1a1a3a" stroke="#FFD700" stroke-width="2"/>
+        <text x="28" y="40" font-size="36" fill="#FFD700" text-anchor="middle">W</text>
+        <text x="48" y="52" font-size="10" fill="#FFA500">4</text>
+      </g>
+      <g transform="translate(377, 210)">
+        <rect x="0" y="0" width="56" height="56" rx="8" fill="#1a1a3a" stroke="#FFD700" stroke-width="2"/>
+        <text x="28" y="40" font-size="36" fill="#FFD700" text-anchor="middle">A</text>
+        <text x="48" y="52" font-size="10" fill="#FFA500">1</text>
+      </g>
+      <g transform="translate(443, 210)">
+        <rect x="0" y="0" width="56" height="56" rx="8" fill="#1a1a3a" stroke="#FFD700" stroke-width="2"/>
+        <text x="28" y="40" font-size="36" fill="#FFD700" text-anchor="middle">R</text>
+        <text x="48" y="52" font-size="10" fill="#FFA500">1</text>
+      </g>
+      <g transform="translate(509, 210)">
+        <rect x="0" y="0" width="56" height="56" rx="8" fill="#1a1a3a" stroke="#FFD700" stroke-width="2"/>
+        <text x="28" y="40" font-size="36" fill="#FFD700" text-anchor="middle">M</text>
+        <text x="48" y="52" font-size="10" fill="#FFA500">3</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bee -->
+  <g transform="translate(400, 140)" filter="url(#glow)">
+    <!-- Wings -->
+    <ellipse cx="-14" cy="-12" rx="12" ry="8" fill="#ffffff" opacity="0.2" transform="rotate(-20)"/>
+    <ellipse cx="14" cy="-12" rx="12" ry="8" fill="#ffffff" opacity="0.2" transform="rotate(20)"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="16" ry="10" fill="#FFD700"/>
+    <rect x="-16" y="-3" width="32" height="3" fill="#1a1a3a" opacity="0.6"/>
+    <rect x="-14" y="3" width="28" height="3" fill="#1a1a3a" opacity="0.6"/>
+    <!-- Head -->
+    <circle cx="-18" cy="0" r="6" fill="#FFD700"/>
+    <!-- Antenna -->
+    <line x1="-22" y1="-4" x2="-28" y2="-14" stroke="#FFD700" stroke-width="1.5"/>
+    <circle cx="-28" cy="-14" r="2" fill="#FFD700"/>
+    <line x1="-18" y1="-5" x2="-20" y2="-16" stroke="#FFD700" stroke-width="1.5"/>
+    <circle cx="-20" cy="-16" r="2" fill="#FFD700"/>
+    <!-- Trail -->
+    <circle cx="30" cy="2" r="2" fill="#FFD700" opacity="0.3"/>
+    <circle cx="42" cy="5" r="1.5" fill="#FFD700" opacity="0.2"/>
+    <circle cx="52" cy="3" r="1" fill="#FFD700" opacity="0.1"/>
+  </g>
+
+  <!-- VS AI badge -->
+  <g transform="translate(400, 310)">
+    <rect x="-60" y="-18" width="120" height="36" rx="18" fill="none" stroke="#FF6600" stroke-width="2" opacity="0.8"/>
+    <text x="-28" y="6" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="bold">YOU</text>
+    <text x="0" y="6" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#FF6600" font-weight="bold">vs</text>
+    <text x="30" y="6" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#FF6600" font-weight="bold">AI</text>
+  </g>
+
+  <!-- Bottom tagline -->
+  <g filter="url(#strongGlow)">
+    <text x="400" y="390" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#FFD700" text-anchor="middle" letter-spacing="3" opacity="0.7">BUZZINGLY FUN WORD GAME</text>
+  </g>
+
+  <!-- Score display -->
+  <g opacity="0.3" font-family="Consolas, monospace">
+    <text x="180" y="360" font-size="11" fill="#00FF88">PLAYER: 142</text>
+    <text x="560" y="360" font-size="11" fill="#FF6600">AI AGENT: 158</text>
+  </g>
+
+  <!-- Floating particles -->
+  <circle cx="300" cy="100" r="1.5" fill="#FFD700" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="520" cy="80" r="1" fill="#FFD700" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.05;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="300" r="1.5" fill="#FF6600" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="620" cy="320" r="1" fill="#FF6600" opacity="0.25">
+    <animate attributeName="opacity" values="0.25;0.05;0.25" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+</svg>

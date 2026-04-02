@@ -85,6 +85,14 @@ const repos: Repo[] = [
     github: "https://github.com/soyr-redhat/real-or-fake-synthetic-data-demo",
     accentColor: "#FF3366",
   },
+  {
+    id: "wordbeez",
+    name: "wordbeez-docker",
+    description: "Word Swarm — can you beat the AI Agent at this buzzingly fun word game?",
+    shortUrl: "red.ht/wordswarm",
+    github: "https://github.com/eformat/wordbeez-docker",
+    accentColor: "#FFD700",
+  },
 ];
 
 function TalkToUsIcon() {
